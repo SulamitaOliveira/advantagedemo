@@ -3,8 +3,8 @@ import { shoppingPage } from "./pages/shoppingPage";
 Cypress.Commands.add('addProduct', (item) => {
 
     shoppingPage.menuSearch().click();
-    shoppingPage.typeNoAutoComplete('Tablets');
-    shoppingPage.clickNoProduct();
+    shoppingPage.typeAutoComplete('Tablets');
+    shoppingPage.clickProduct();
     shoppingPage.addToCart();
 });
 

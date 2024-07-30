@@ -7,7 +7,7 @@ class ShoppingPage {
     return cy.get('#menuSearch');
   }
 
-  typeNoAutoComplete(searchTerm) {
+  typeAutoComplete(searchTerm) {
     cy.get('#autoComplete').wait(100).type(searchTerm);
   }
 
@@ -19,7 +19,7 @@ class ShoppingPage {
     return cy.get('.select');
   }
 
-  clickNoProduct() {
+  clickProduct() {
     return cy.get('[href="#/product/16"] > img').click();
   }
 
@@ -39,7 +39,7 @@ class ShoppingPage {
     return cy.get('.smoolMargin > .Quantity').click();
   }
 
-  clickNoCartMenu() {
+  clickCartMenu() {
     return cy.get('#menuCart').click();
   }
 
@@ -47,7 +47,7 @@ class ShoppingPage {
     return cy.get('.edit');
   }
 
-  clickNoButtonRemove() {
+  clickButtonRemove() {
     return cy.get('.remove');
   }
 
@@ -55,7 +55,7 @@ class ShoppingPage {
     return cy.get('.a-button');
   }
 
-  clickNoButtonCheckout() {
+  clickButtonCheckout() {
     return cy.get('#checkOutButton');
   }
 
@@ -92,7 +92,7 @@ class ShoppingPage {
     return cy.get('[name="i_agree"]').check();
   }
 
-  clickNoButtonRegistration() {
+  clickButtonRegistration() {
     return cy.get('#register_btn').click();
   }
 
@@ -167,9 +167,13 @@ class ShoppingPage {
 
   buttonNextPayment() {
     return cy.get(':nth-child(1) > .secForm > [a-hint="Password"] > .inputContainer > .ng-pristine');
-  }
+  }       
+
+  buttonOrderPayment(){
+    return cy.get('.ng-isolate-scope > #next_btn');
+   
 }
 
-
+}
 
 export const shoppingPage = new ShoppingPage();
